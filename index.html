@@ -31,29 +31,64 @@
 
       /* Write CSS Here */
 
-      .three-column-grid {
-      }
+      .two-column-grid {
 
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 5px;
+        padding-right: 10px ;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: dashed;
+        border-color: lightblue;
+      }
+      
+      .three-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+      }  
+       
       .three-column-grid__expand-two {
+        display: grid; 
       }
 
       .five-column-grid {
-      }
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }   
 
       .center-grid {
+        display: grid;
+        grid-template-columns: 250px;
+        place-content: center;
       }
 
-      .centered {
+      .container-two-column-grid {
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 5px);
+        gap: 5px;
       }
+
+    
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
-      .two-column-grid {
-      }
     </style>
   </head>
   <body>
+    <div>
+    <h2>Two Column Grid (Icon Pattern)</h2>
+    <div class="two-column-grid">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </div>
     <div>
       <h2>Three Column Grid</h2>
       <div class="container three-column-grid">
@@ -84,23 +119,19 @@
       <h2>Center Grid</h2>
       <div class="container center-grid">
         <div class="box centered"></div>
+        
       </div>
     </div>
     <div>
       <h2>Grid within Grid #1</h2>
-      <div class="container two-column-grid">
-        <div class="box">
+      <div class="container-two-column-grid">
+        <div class="inner-box"></div>
+        <div class="inner-box"></div>
+        <div class="inner-box"></div>
+
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
-        </div>
-        <div class="box">
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
-        </div>
       </div>
     </div>
     <div>
